@@ -1,0 +1,27 @@
+.login-main {
+   
+    background: url(../img/header_1.png), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    width: 179.9rem;
+    height: 116rem;
+    flex-shrink: 0;
+
+}
+
+.email {
+color: rgba(57, 54, 19, 0.80);
+font-family: $fuente_principal;
+font-size: 15px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+
+    placeholder {
+        position: absolute;
+        left: 13.5px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.33);
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
