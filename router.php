@@ -23,17 +23,17 @@ class Router {
         //arreglo de rutas protegidas 
         $rutas_protegidas = ['/admin', '/propiedades/crear', '/propiedades/actualizar', '/propiedades/eliminar', '/vendedores/crear', '/vendedores/actualizar', '/vendedores/eliminar'];
 
-        $urlActual = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
+        $currentUrl = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
        $metodo = $_SERVER['REQUEST_METHOD'];   
 
 
        if ($metodo === 'GET') {
-            $fn = $this->rutasGET[$urlActual] ?? null;
+            $fn = $this->rutasGET[$currentUrl] ?? null;
         } else {
-            $fn = $this->rutasPOST[$urlActual] ?? null;
+            $fn = $this->rutasPOST[$currentUrl] ?? null;
         }
 
-        if(in_array($urlActual, $rutas_protegidas) && !$auth ) {
+        if (in_array($currentUrl, $rutas_protegidas) && !$auth) {
             header('Location: /');
         }
 
