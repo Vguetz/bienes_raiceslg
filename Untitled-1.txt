@@ -1,0 +1,6 @@
+host: nyc.domcloud.id
+user:bienesraiceslg
+p:aV29tSsT5sF1Ba_(6(
+port:3306
+
+db: bienesraiceslg_db
